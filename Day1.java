@@ -1,5 +1,5 @@
-problem of the day:-ugly number(leetcode)
-https://leetcode.com/problems/ugly-number/description/?envType=problem-list-v2&envId=math
+// problem of the day:-ugly number(leetcode)
+// https://leetcode.com/problems/ugly-number/description/?envType=problem-list-v2&envId=math
 
 class Solution {
     public boolean isUgly(int n) {
