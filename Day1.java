@@ -15,3 +15,24 @@ class Solution {
         return n==1;
     }
 }
+
+// approach :- we will repeatedly divide n with 2,3,5 until it becomes one 
+// Time complexity o(logn)
+
+// problem of the day:-reverse bit
+class Solution {
+    static Long reversedBits(Long x) {
+           double i=31,a,ans=0;
+        while(x>0){
+            a=x%2;
+            ans=ans+Math.pow(2,i)*a;
+            i--;
+            x=x/2;
+        }
+        
+        return (long)ans;
+    }
+};
+T.C:O(logn) 
+S.C:O(1) 
+
