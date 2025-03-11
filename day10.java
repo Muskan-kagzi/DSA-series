@@ -35,6 +35,51 @@ TC:O(n)
 SC:O(1)
 Approach:we will make two seperate array for positive and for negative the add one by one to original array
 
+problem 2:
+import java.util.*;
+
+class Solution {
+    public void nextPermutation(int[] nums) {
+        int n = nums.length; 
+        int ind = -1; 
+        
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                ind = i;
+                break;
+            }
+        }
+
+        if (ind == -1) {
+            reverse(nums, 0, n - 1);
+            return;
+        }
+
+        for (int i = n - 1; i > ind; i--) {
+            if (nums[i] > nums[ind]) {
+                int tmp = nums[i];
+                nums[i] = nums[ind];
+                nums[ind] = tmp;
+                break;
+            }
+        }
+
+        reverse(nums, ind + 1, n - 1);
+    }
+
+    private void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int tmp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = tmp;
+            start++;
+            end--;
+        }
+    }
+}
+TC-O(n)
+SC-O(1)
+    
 problem 3: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/ 
 class Solution {
     public int maxProfit(int[] prices) {
