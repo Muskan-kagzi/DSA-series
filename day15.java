@@ -15,7 +15,6 @@ class Solution {
     }
 }
 //TC:O(m+n)
-//SC:O(1)
 
 //Problem:Search a 2D matrix
 //https://leetcode.com/problems/search-a-2d-matrix/description/
