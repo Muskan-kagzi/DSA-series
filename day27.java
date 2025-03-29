@@ -1,12 +1,31 @@
 Q1: https://bit.ly/3w6hUaa
+// PROBlem:-reverse the doubly linked list
+class Solution {
+    public DLLNode reverseDLL(DLLNode head) {
+        // Your code here
+        DLLNode curr=head;
+        DLLNode after=null;
+        DLLNode early=null;
+        while(curr!=null){
+            after=curr.next;
+            curr.next=early;
+            early=curr;
+            curr=after;
+        }
+        return early;
+    }
+}
+TC-O(N)
+SC-O(1)
 Q2: https://bit.ly/3QlEoMx 
+PROBLEM:-deletion in doubly linked list
 class Solution {
     public Node deleteNode(Node head, int x) {
         if (head == null) {
             return null;
         }
 
-        if (x == 1) { // Deleting the first node
+        if (x == 1) { 
             head = head.next;
             if (head != null) {
                 head.prev = null;
@@ -34,4 +53,5 @@ class Solution {
         return head;
     }
 }
-
+TC-O(N)
+SC-O(1)
